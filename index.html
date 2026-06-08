@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI Literacy Activities · Academic Innovation · University of Mississippi</title>
+<meta name="description" content="Six interactive AI-literacy activities for faculty development, by Marc Watkins — Academic Innovation at the University of Mississippi. Skepticism and curiosity, in equal measure." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500;1,6..72,600;1,6..72,700&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============================ LOADER ============================ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div style="text-align:center">
+    <div class="mono">UM</div>
+    <div class="bar"><i id="loadbar"></i></div>
+    <div class="cap">Academic Innovation</div>
+  </div>
+</div>
+
+<!-- ====================== EDGE CERTIFICATE FRAME ====================== -->
+<div class="edge-frame" aria-hidden="true">
+  <svg preserveAspectRatio="none" viewBox="0 0 1000 1000">
+    <rect class="draw outer" x="2" y="2" width="996" height="996"></rect>
+    <rect class="draw inner" x="10" y="10" width="980" height="980"></rect>
+    <!-- corner diamonds -->
+    <rect class="corner" x="-4" y="-4" width="12" height="12" transform="rotate(45 2 2)"></rect>
+    <rect class="corner" x="992" y="-4" width="12" height="12" transform="rotate(45 998 2)"></rect>
+    <rect class="corner" x="-4" y="992" width="12" height="12" transform="rotate(45 2 998)"></rect>
+    <rect class="corner" x="992" y="992" width="12" height="12" transform="rotate(45 998 998)"></rect>
+  </svg>
+</div>
+
+<!-- ============================ SIDE RAILS ============================ -->
+<div class="rail left" aria-hidden="true">
+  <div class="ticks"></div>
+  <div class="progress" id="railL"></div>
+  <div class="vlabel">AI Literacy · Faculty Development</div>
+</div>
+<div class="rail right" aria-hidden="true">
+  <div class="ticks"></div>
+  <div class="progress" id="railR"></div>
+  <div class="vlabel">University of Mississippi</div>
+</div>
+
+<!-- ============================ HERO ============================ -->
+<header class="hero" id="top">
+  <div class="watermark" aria-hidden="true">M</div>
+  <div class="wrap">
+    <div class="kicker">
+      <svg class="crest" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" fill="none" stroke="#0C2340" stroke-width="1.5"></circle>
+        <circle cx="20" cy="20" r="15" fill="#0C2340"></circle>
+        <text x="20" y="26.5" text-anchor="middle" font-family="Newsreader, serif" font-weight="700" font-size="17" fill="#CE1126">M</text>
+      </svg>
+      <span class="eyebrow">Academic Innovation · University of Mississippi</span>
+    </div>
+
+    <h1 class="display">
+      <span class="line"><span>AI literacy you</span></span>
+      <span class="line"><span>can <em>actually</em></span></span>
+      <span class="line"><span>teach.</span></span>
+    </h1>
+
+    <p class="sub">Six interactive activities for faculty who want to bring generative AI into the room — with skepticism and curiosity in equal measure. No detectors. No adversarial games. Just better conversations about how students read, write, and decide.</p>
+
+    <div class="meta-row">
+      <a class="btn" href="#activities">Explore the activities <span class="arrow">↓</span></a>
+      <a class="btn ghost" href="#workshop">Use them in a workshop</a>
+      <span class="count"><b>6</b> interactive activities · free to use &amp; share</span>
+    </div>
+
+    <figure class="hero-photo reveal">
+      <img src="assets/workshop-2000.jpg" alt="Faculty collaborating on laptops during an AI literacy institute at the University of Mississippi" />
+      <figcaption><span>Faculty at an AI literacy institute</span> · University of Mississippi</figcaption>
+    </figure>
+  </div>
+</header>
+
+<!-- ============================ INTRO BAND ============================ -->
+<section class="band" id="why">
+  <div class="wrap intro-grid">
+    <div>
+      <span class="eyebrow on-navy">Why this, why now</span>
+      <h2 style="margin-top:1rem">AI-aware, within the boundaries of <em>your actual teaching life.</em></h2>
+    </div>
+    <div class="intro-lede">
+      <p>Most writing about AI in education treats it as a problem to manage. I'd rather we treat it as something to understand. AI literacy isn't fluency — it's demystifying how these tools work while being honest about what they cost us, and what they're doing to us.</p>
+      <p class="pull">Fifteen minutes a week isn't revolutionary. But it's possible for most of us — and that's the point.</p>
+      <p>These activities are small on purpose. They're built for the time you actually have: to start a conversation with students about agency and voice, and to let that conversation be a continuum — not a single policy line buried in a syllabus.</p>
+
+      <div class="tenets">
+        <div class="tenet">
+          <div class="n">i.</div>
+          <div class="t"><b>Skepticism and curiosity</b><span>Hold both at once. Demystify how these tools work without pretending they're neutral.</span></div>
+        </div>
+        <div class="tenet">
+          <div class="n">ii.</div>
+          <div class="t"><b>Friction is a choice, not a failure</b><span>Sometimes the slow path is the learning. Support faculty whether they work with AI or add friction to curb it.</span></div>
+        </div>
+        <div class="tenet">
+          <div class="n">iii.</div>
+          <div class="t"><b>Never adversarial</b><span>No detectors, no traps. Integrity is taught from shared values — and from conversations that continue.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ACTIVITIES ============================ -->
+<section class="activities" id="activities">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>The <em>activities</em></h2>
+      <p class="note">Each one is live and self-contained. Hover a card to preview it; click to open the full tool in a new tab.</p>
+    </div>
+
+    <div class="filters reveal" id="filters">
+      <button class="chip active" data-filter="all">All <span class="c">6</span></button>
+      <button class="chip" data-filter="discussion">Discussion <span class="c">1</span></button>
+      <button class="chip" data-filter="reflection">Reflection <span class="c">3</span></button>
+      <button class="chip" data-filter="assessment">Assessment <span class="c">1</span></button>
+      <button class="chip" data-filter="disclosure">Disclosure <span class="c">2</span></button>
+      <button class="chip" data-filter="reading">Reading <span class="c">1</span></button>
+    </div>
+
+    <div class="grid" id="grid">
+
+      <!-- 01 -->
+      <a class="card" data-tags="disclosure classroom" href="https://mwatkins03-netizen.github.io/Academic-Integrity-Icons-Claude-4.8-/" target="_blank" rel="noopener">
+        <span class="idx">01</span>
+        <div class="preview">
+          <div class="poster">
+            <span class="ptag">Disclosure · Classroom-ready</span>
+            <span class="ghostnum">1</span>
+            <span class="ptitle">Academic Integrity Icons</span>
+            <span class="peek">Hover for live preview</span>
+          </div>
+          <span class="live"><span class="dot"></span> Live preview</span>
+          <div class="frame-holder" data-src="https://mwatkins03-netizen.github.io/Academic-Integrity-Icons-Claude-4.8-/"></div>
+        </div>
+        <div class="body">
+          <div class="tags"><span class="tag">Disclosure</span><span class="tag">Classroom-ready</span></div>
+          <h3>Academic Integrity Icons</h3>
+          <p class="desc">Build a set of integrity badges that tell students exactly what's permitted on each assignment — with AI guidance mapped to the AI Assessment Scale, ready to paste straight into Blackboard.</p>
+          <span class="launch">Open the builder <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <!-- 02 -->
+      <a class="card" data-tags="reading reflection" href="https://mwatkins03-netizen.github.io/Reading-Friction-Tracker/" target="_blank" rel="noopener">
+        <span class="idx">02</span>
+        <div class="preview">
+          <div class="poster">
+            <span class="ptag">Reading · Reflection</span>
+            <span class="ghostnum">2</span>
+            <span class="ptitle">Reading Friction Tracker</span>
+            <span class="peek">Hover for live preview</span>
+          </div>
+          <span class="live"><span class="dot"></span> Live preview</span>
+          <div class="frame-holder" data-src="https://mwatkins03-netizen.github.io/Reading-Friction-Tracker/"></div>
+        </div>
+        <div class="body">
+          <div class="tags"><span class="tag">Reading</span><span class="tag">Reflection</span></div>
+          <h3>Reading Friction Tracker</h3>
+          <p class="desc">Reading is where thinking slows down — and where AI quietly offers to speed it up. A tool for noticing the friction worth keeping, and naming the moments we're tempted to outsource.</p>
+          <span class="launch">Open the tracker <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <!-- 03 -->
+      <a class="card" data-tags="reflection ethics" href="https://mwatkins03-netizen.github.io/Pause-Before-You-Prompt/" target="_blank" rel="noopener">
+        <span class="idx">03</span>
+        <div class="preview">
+          <div class="poster">
+            <span class="ptag">Reflection · Ethics</span>
+            <span class="ghostnum">3</span>
+            <span class="ptitle">Pause Before You Prompt</span>
+            <span class="peek">Hover for live preview</span>
+          </div>
+          <span class="live"><span class="dot"></span> Live preview</span>
+          <div class="frame-holder" data-src="https://mwatkins03-netizen.github.io/Pause-Before-You-Prompt/"></div>
+        </div>
+        <div class="body">
+          <div class="tags"><span class="tag">Reflection</span><span class="tag">Ethics</span></div>
+          <h3>Pause Before You Prompt</h3>
+          <p class="desc">Seven pillars of ethical AI use, real scenarios, and a reflection journal students can export. A metacognitive framework built to interrupt the reflex to prompt.</p>
+          <span class="launch">Open the framework <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <!-- 04 -->
+      <a class="card" data-tags="disclosure classroom" href="https://mwatkins03-netizen.github.io/AI-Disclosure-Generator-/" target="_blank" rel="noopener">
+        <span class="idx">04</span>
+        <div class="preview">
+          <div class="poster">
+            <span class="ptag">Disclosure · Classroom-ready</span>
+            <span class="ghostnum">4</span>
+            <span class="ptitle">AI Disclosure Generator</span>
+            <span class="peek">Hover for live preview</span>
+          </div>
+          <span class="live"><span class="dot"></span> Live preview</span>
+          <div class="frame-holder" data-src="https://mwatkins03-netizen.github.io/AI-Disclosure-Generator-/"></div>
+        </div>
+        <div class="body">
+          <div class="tags"><span class="tag">Disclosure</span><span class="tag">Classroom-ready</span></div>
+          <h3>AI Disclosure Generator</h3>
+          <p class="desc">Model the transparency we ask of students. Generate a clear, citable statement describing how and where AI was used — for a syllabus, an assignment, or your own scholarship.</p>
+          <span class="launch">Open the generator <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <!-- 05 -->
+      <a class="card" data-tags="discussion" href="https://mwatkins03-netizen.github.io/Provocative-Scenarios-to-Spark-Discussion-/" target="_blank" rel="noopener">
+        <span class="idx">05</span>
+        <div class="preview">
+          <div class="poster">
+            <span class="ptag">Discussion</span>
+            <span class="ghostnum">5</span>
+            <span class="ptitle">Provocative Scenarios</span>
+            <span class="peek">Hover for live preview</span>
+          </div>
+          <span class="live"><span class="dot"></span> Live preview</span>
+          <div class="frame-holder" data-src="https://mwatkins03-netizen.github.io/Provocative-Scenarios-to-Spark-Discussion-/"></div>
+        </div>
+        <div class="body">
+          <div class="tags"><span class="tag">Discussion</span></div>
+          <h3>Provocative Scenarios to Spark Discussion</h3>
+          <p class="desc">Short, pointed scenarios designed to start the conversation that shapes how students see their own agency with AI. Drop one into class and let the disagreement do the teaching.</p>
+          <span class="launch">Open the scenarios <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <!-- 06 -->
+      <a class="card" data-tags="assessment reflection" href="https://mwatkins03-netizen.github.io/AI-Grading-Dilemmas-/" target="_blank" rel="noopener">
+        <span class="idx">06</span>
+        <div class="preview">
+          <div class="poster">
+            <span class="ptag">Assessment · Reflection</span>
+            <span class="ghostnum">6</span>
+            <span class="ptitle">AI Grading Dilemmas</span>
+            <span class="peek">Hover for live preview</span>
+          </div>
+          <span class="live"><span class="dot"></span> Live preview</span>
+          <div class="frame-holder" data-src="https://mwatkins03-netizen.github.io/AI-Grading-Dilemmas-/"></div>
+        </div>
+        <div class="body">
+          <div class="tags"><span class="tag">Assessment</span><span class="tag">Reflection</span></div>
+          <h3>AI Grading Dilemmas</h3>
+          <p class="desc">What we give up when we let AI decide. Branching scenarios that place you inside the trade-offs of AI-assisted grading — no right answers, only the questions worth carrying.</p>
+          <span class="launch">Open the dilemmas <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ WORKSHOP ============================ -->
+<section class="workshop" id="workshop">
+  <div class="wrap">
+    <div class="inner reveal">
+      <span class="eyebrow">In a workshop or a single class</span>
+      <h2 style="margin-top:1rem">A <em>fifteen-minute</em> arc you can run anywhere.</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="num">i.</span>
+          <h4>Open with friction</h4>
+          <p>Start with a scenario, not a slide. Surface disagreement in the first ten minutes — it's the fastest way to get people talking about their own choices.</p>
+          <p class="uses">Use: <span>Provocative Scenarios</span> · <span>AI Grading Dilemmas</span></p>
+        </div>
+        <div class="step">
+          <span class="num">ii.</span>
+          <h4>Make thinking visible</h4>
+          <p>Slow the reflex to prompt. Use a metacognitive tool to notice where real understanding gets built — or quietly outsourced.</p>
+          <p class="uses">Use: <span>Pause Before You Prompt</span> · <span>Reading Friction Tracker</span></p>
+        </div>
+        <div class="step">
+          <span class="num">iii.</span>
+          <h4>Set expectations you can see</h4>
+          <p>Close by designing the assignment: name what's permitted, and model the disclosure you ask of your students.</p>
+          <p class="uses">Use: <span>Academic Integrity Icons</span> · <span>AI Disclosure Generator</span></p>
+        </div>
+      </div>
+      <p class="tip">Pick one. A single activity, run well and discussed honestly, beats a semester of policy nobody reads.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer" id="about">
+  <div class="wrap">
+    <div class="about">
+      <div>
+        <span class="eyebrow on-navy">About</span>
+        <h2 style="margin-top:1rem">A faculty resource from <span style="color:#E9B6BC">Academic Innovation.</span></h2>
+        <p>Marc Watkins is Assistant Director of Academic Innovation and Director of the AI Institute for Teachers at the University of Mississippi, where he is a Lecturer in Writing and Rhetoric. He writes about how AI is reshaping education, culture, and society at <a class="link" href="https://marcwatkins.substack.com/" target="_blank" rel="noopener">Rhetorica</a>.</p>
+        <p style="margin-top:1.4rem">
+          <a class="btn ghost" style="border-color:rgba(246,240,226,.35);color:var(--cream)" href="https://marcwatkins.substack.com/" target="_blank" rel="noopener">Read Rhetorica <span class="arrow">→</span></a>
+        </p>
+      </div>
+
+      <div class="disclosure">
+        <div class="lab">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#E8B9BF" stroke-width="1.6"></circle><path d="M12 7v.01M12 10.5v6.5" stroke="#E8B9BF" stroke-width="1.8" stroke-linecap="round"></path></svg>
+          AI Disclosure
+        </div>
+        <p>This page and several of these activities were built by Marc Watkins working alongside generative AI (Claude, by Anthropic). The ideas, pedagogy, and framing are mine; the code was drafted with AI assistance and reviewed by me.</p>
+        <p>I disclose this for the same reason I ask my students to: transparency is part of the work.</p>
+      </div>
+    </div>
+
+    <div class="colophon">
+      <div class="ole">
+        <svg class="crest" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="19" fill="none" stroke="#F6F0E2" stroke-width="1.5"></circle>
+          <circle cx="20" cy="20" r="15" fill="#CE1126"></circle>
+          <text x="20" y="26.5" text-anchor="middle" font-family="Newsreader, serif" font-weight="700" font-size="17" fill="#F6F0E2">M</text>
+        </svg>
+        University of Mississippi · Academic Innovation
+      </div>
+      <div>© 2026 Marc Watkins · Built with skepticism &amp; curiosity</div>
+    </div>
+  </div>
+</footer>
+
+<a class="ai-pill" id="aiPill" href="#about"><span class="dot"></span> Built with AI · disclosed</a>
+
+<script>
+/* =========================================================================
+   Academic Innovation · AI Literacy Activities — interactions
+   ========================================================================= */
+(function () {
+  "use strict";
+
+  var root = document.documentElement;
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function primeFrame() {
+    var rects = document.querySelectorAll(".edge-frame .draw");
+    rects.forEach(function (r) {
+      var len;
+      try { len = r.getTotalLength(); } catch (e) { len = 4000; }
+      r.style.setProperty("--len", len);
+    });
+  }
+
+  function runLoader() {
+    var bar = document.getElementById("loadbar");
+    if (reduce) {
+      if (bar) bar.style.width = "100%";
+      root.classList.add("is-ready");
+      afterReady();
+      return;
+    }
+    var pct = 0;
+    var iv = setInterval(function () {
+      pct += Math.random() * 22 + 8;
+      if (pct >= 100) { pct = 100; clearInterval(iv); }
+      if (bar) bar.style.width = pct + "%";
+      if (pct === 100) {
+        setTimeout(function () {
+          root.classList.add("is-ready");
+          afterReady();
+        }, 260);
+      }
+    }, 130);
+  }
+
+  function afterReady() {
+    setupReveal();
+    setupRails();
+    setupFilters();
+    setupLazyFrames();
+    setupAiPill();
+  }
+
+  function setupReveal() {
+    var els = document.querySelectorAll(".reveal, .card");
+    if (!("IntersectionObserver" in window)) {
+      els.forEach(function (el) { el.classList.add("in"); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          var el = en.target;
+          var sibs = el.parentElement ? [].slice.call(el.parentElement.children) : [];
+          var i = sibs.indexOf(el);
+          el.style.transitionDelay = (i > -1 ? Math.min(i, 6) * 0.06 : 0) + "s";
+          el.classList.add("in");
+          io.unobserve(el);
+        }
+      });
+    }, { threshold: 0.14, rootMargin: "0px 0px -8% 0px" });
+    els.forEach(function (el) { io.observe(el); });
+  }
+
+  function setupRails() {
+    var L = document.getElementById("railL");
+    var R = document.getElementById("railR");
+    if (!L && !R) return;
+    var ticking = false;
+    function update() {
+      var h = document.documentElement;
+      var max = h.scrollHeight - h.clientHeight;
+      var p = max > 0 ? h.scrollTop / max : 0;
+      var track = window.innerHeight * 0.76;
+      var px = Math.max(0, Math.min(1, p)) * track;
+      if (L) L.style.height = px + "px";
+      if (R) R.style.height = px + "px";
+      ticking = false;
+    }
+    window.addEventListener("scroll", function () {
+      if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    }, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+  }
+
+  function setupLazyFrames() {
+    var holders = document.querySelectorAll(".frame-holder[data-src]");
+    function load(holder) {
+      if (holder.dataset.loaded) return;
+      holder.dataset.loaded = "1";
+      var card = holder.closest(".card");
+      var iframe = document.createElement("iframe");
+      iframe.setAttribute("loading", "lazy");
+      iframe.setAttribute("tabindex", "-1");
+      iframe.setAttribute("aria-hidden", "true");
+      iframe.setAttribute("scrolling", "no");
+      iframe.setAttribute("sandbox", "allow-scripts allow-same-origin");
+      iframe.addEventListener("load", function () {
+        if (card) card.classList.add("loaded");
+      });
+      setTimeout(function () { if (card) card.classList.add("loaded"); }, 2600);
+      iframe.src = holder.dataset.src;
+      holder.appendChild(iframe);
+    }
+    if (!("IntersectionObserver" in window)) {
+      holders.forEach(load);
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { load(en.target); io.unobserve(en.target); }
+      });
+    }, { rootMargin: "300px 0px" });
+    holders.forEach(function (h) { io.observe(h); });
+
+    document.querySelectorAll(".card").forEach(function (card) {
+      card.addEventListener("mouseenter", function () {
+        var h = card.querySelector(".frame-holder[data-src]");
+        if (h) load(h);
+      });
+    });
+  }
+
+  function setupFilters() {
+    var chips = document.querySelectorAll(".chip");
+    var cards = [].slice.call(document.querySelectorAll(".grid .card"));
+    chips.forEach(function (chip) {
+      chip.addEventListener("click", function () {
+        chips.forEach(function (c) { c.classList.remove("active"); });
+        chip.classList.add("active");
+        var f = chip.dataset.filter;
+        cards.forEach(function (card, i) {
+          var match = f === "all" || (card.dataset.tags || "").indexOf(f) > -1;
+          if (match) {
+            card.classList.remove("hide");
+            card.classList.remove("in");
+            void card.offsetWidth;
+            card.style.transitionDelay = (i % 6) * 0.05 + "s";
+            requestAnimationFrame(function () { card.classList.add("in"); });
+          } else {
+            card.classList.add("hide");
+          }
+        });
+      });
+    });
+  }
+
+  function setupAiPill() {
+    var pill = document.getElementById("aiPill");
+    var footer = document.getElementById("about");
+    if (!pill) return;
+    var ticking = false;
+    function update() {
+      var y = window.scrollY || window.pageYOffset;
+      var nearFooter = false;
+      if (footer) {
+        var fr = footer.getBoundingClientRect();
+        nearFooter = fr.top < window.innerHeight * 0.85;
+      }
+      if (y > window.innerHeight * 0.6 && !nearFooter) pill.classList.add("show");
+      else pill.classList.remove("show");
+      ticking = false;
+    }
+    window.addEventListener("scroll", function () {
+      if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    }, { passive: true });
+    update();
+  }
+
+  primeFrame();
+  if (document.readyState === "complete") {
+    runLoader();
+  } else {
+    window.addEventListener("load", runLoader);
+    setTimeout(function () {
+      if (!root.classList.contains("is-ready")) runLoader();
+    }, 2500);
+  }
+})();
+</script><template id="__bundler_thumbnail" data-bg-color="#0C2340">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect x="40" y="40" width="1120" height="720" fill="none" stroke="#F6F0E2" stroke-width="6"/>
+    <rect x="64" y="64" width="1072" height="672" fill="none" stroke="#CE1126" stroke-width="4"/>
+    <circle cx="600" cy="360" r="150" fill="none" stroke="#F6F0E2" stroke-width="8"/>
+    <circle cx="600" cy="360" r="118" fill="#CE1126"/>
+    <text x="600" y="420" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="170" fill="#F6F0E2">M</text>
+    <text x="600" y="585" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="58" fill="#F6F0E2" letter-spacing="2">AI Literacy</text>
+    <text x="600" y="640" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="22" fill="#E8B9BF" letter-spacing="8">ACADEMIC INNOVATION</text>
+  </svg>
+</template>
+
+</body>
+</html>
